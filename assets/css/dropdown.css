@@ -1,0 +1,145 @@
+
+  
+  #dd_branches{
+    height: 35px;
+    border-radius: 4px;
+    width: 100%;
+    font-family: helvetica;
+    color: #636363;
+    font-size: 16px;
+  }
+  
+  .dd_location{
+    height: 35px;
+    border-radius: 4px;
+    width: 100%;
+    font-family: helvetica;
+    color: #636363;
+    font-size: 16px;
+  }
+  
+  .dd_idtype{
+    height: 35px;
+    border-radius: 4px;
+    width: 100%;
+    font-family: helvetica;
+    color: #636363;
+    font-size: 16px;
+  }
+  
+  .dd_salary{
+    height: 35px;
+    border-radius: 4px;
+    width: 100%;
+    font-family: helvetica;
+    color: #636363;
+    font-size: 16px;
+  }
+
+  .dd_sourceoffund{
+    height: 35px;
+    border-radius: 4px;
+    width: 100%; 
+    font-family: helvetica; 
+    color: #636363;
+    font-size: 16px;
+  }
+
+  .dd_title{
+    height: 35px;
+    border-radius: 4px;
+    width: 100%; 
+    font-family: helvetica; 
+    color: #636363;
+    font-size: 16px;
+  }
+
+  .dd_marital_status{
+    height: 35px;
+    border-radius: 4px;
+    width: 100%; 
+    font-family: helvetica; 
+    color: #636363;
+    font-size: 16px;
+  }
+
+  .txt_preprovince{
+    height: 35px;
+    border-radius: 4px;
+    width: 100%; 
+    font-family: helvetica; 
+    color: #636363;
+    font-size: 16px;
+  }
+
+  .txt_perprovince{
+    height: 35px;
+    border-radius: 4px;
+    width: 100%; 
+    font-family: helvetica; 
+    color: #636363;
+    font-size: 16px;
+  }
+
+  .txt_precity{
+    height: 35px;
+    border-radius: 4px;
+    width: 100%; 
+    font-family: helvetica; 
+    color: #636363;
+    font-size: 16px;
+  }
+
+  .txt_percity{
+    height: 35px;
+    border-radius: 4px;
+    width: 100%; 
+    font-family: helvetica; 
+    color: #636363;
+    font-size: 16px;
+  }
+
+  .txt_precitymm{
+    height: 35px;
+    border-radius: 4px;
+    width: 100%; 
+    font-family: helvetica; 
+    font-size: 16px;
+    background:#ddd;
+  }
+
+  .dd_idtype{
+    height: 35px;
+    border-radius: 4px;
+    width: 100%; 
+    font-family: helvetica; 
+    font-size: 16px;
+    background:#ddd;
+  }
+
+  .dd_sourceoffund{
+    height: 35px;
+    border-radius: 4px;
+    width: 100%; 
+    font-family: helvetica; 
+    font-size: 16px;
+    background:#ddd;
+  }
+
+  .dd_salary{
+    height: 35px;
+    border-radius: 4px;
+    width: 100%; 
+    font-family: helvetica; 
+    font-size: 16px;
+    background:#ddd;
+  }
+
+.txt_gender{
+    height: 35px;
+    border-radius: 4px;
+    width: 100%; 
+    font-family: helvetica; 
+    color: #636363;
+    font-size: 16px;
+  }

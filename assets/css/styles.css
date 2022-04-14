@@ -1,0 +1,137 @@
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(200, 200, 200);
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: rgb(200, 200, 200);
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: rgb(200, 200, 200);
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+  color:    rgb(200, 200, 200);
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+ color:    rgb(200, 200, 200);
+ opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+ color:    rgb(200, 200, 200);
+ opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+ color:    rgb(200, 200, 200);
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+ color:    rgb(200, 200, 200);
+}
+
+::placeholder { /* Most modern browsers support this now. */
+ color:    rgb(200, 200, 200);
+}
+
+
+
+
+
+.h4titles{
+  padding-top:10px;
+  padding-left: 40px;
+  font-family: helvetica,sans-serif;
+  margin-bottom: 20px;
+  background-image:url('../../image/heading.png');
+  background-repeat: no-repeat;
+  background-size: 500px 43px;
+  color:white;
+}
+
+#navigationbar{
+  background-color:#303030;
+  color:#fefefe;
+  margin-bottom:20px;
+}
+
+.nav.navbar-nav.ml-auto {
+  color:#fefefe;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color:#ffffff;
+}
+
+.navbar-light .navbar-brand {
+  color:#ffffff;
+}
+
+.navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link {
+  color:#fff;
+}
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+  color:#c4d8e2;
+}
+
+label {
+  font-family: helvetica;
+  font-size:17px;
+}
+
+div input{
+  font-family: helvetica;
+  font-size:20px;
+}
+
+.dropdown, .dropleft, .dropright, .dropup {
+  position:relative;
+}
+
+.btn.btn-outline-light.btn-block.dropdown-toggle {
+  color:rgb(0,0,0);
+}
+
+.dropdown-menu {
+  position:absolute;
+  /*top:100%;*/
+  left:0;
+  z-index:1000;
+  display:none;
+  float:left;
+  min-width:10rem;
+  padding:.5rem 0;
+  margin:.125rem 0 0;
+  font-size:1rem;
+  color:#212529;
+  text-align:center;
+  list-style:none;
+  background-color:#fff;
+  background-clip:padding-box;
+  border:1px solid rgba(0,0,0,.15);
+  border-radius:.25rem;
+  width:360px;
+}
+
+.lbp-logo {
+  margin-right:10px;
+  width:50px;
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+  margin-bottom:10px;
+}
+
+.h4, h4 {
+  font-size:1.5rem;
+}
+
+
+.btn-danger {
+  color:#fff;
+  background-color:#dc3545;
+  border-color:#dc3545;
+  width:75px;
+  margin-right:10px;
+}
+

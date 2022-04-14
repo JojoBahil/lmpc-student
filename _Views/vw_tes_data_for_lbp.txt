@@ -1,0 +1,5 @@
+SELECT a.app_id, a.award_no, a.ac_year, b.lname, b.fname, b.mname, b.sex, b.birthdate, b.m_lname, b.m_fname, b.m_mname, a.hei_uii, b.street as permanent_street, b.town as permanent_city, b.province as permanent_province, b.zip_code as permanent_zip FROM tbl_pnsl_grantees AS a INNER JOIN tbl_tes_applicants AS b on a.app_id = b.app_id
+
+UNION
+
+SELECT a.app_id, a.award_no, a.ac_year, b.lname, b.fname, b.mname, b.sex, b.birthdate, b.m_lname, b.m_fname, b.m_mname, a.hei_uii, b.street as permanent_street, b.town as permanent_city, b.province as permanent_province, b.zip_code as permanent_zip FROM tbl_listahanan_grantees AS a INNER JOIN tbl_tes_applicants AS b on a.app_id = b.app_id 
