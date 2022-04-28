@@ -437,15 +437,15 @@
                                         <div class="form-row">
                                             <div class="col">
                                                 <div><label><span style= "color:red">* </span>First Name (and Ext. Name if applicable)</label></div>
-                                                <input type="text" name="txt_fname" class="form-control txt_fname" id="txt_fname" style="text-transform:uppercase" pattern="[A-Za-z ]+" onpaste="return false;" ondrop="return false;" autocomplete="off" value="<?php echo $db_fname; ?>">
+                                                <input type="text" name="txt_fname" class="form-control txt_fname" id="txt_fname" style="text-transform:uppercase" pattern="[A-Za-z ]+" onpaste="return false;" ondrop="return false;" autocomplete="off" value="<?php echo $db_fname; ?>" onblur="upperCaseIt()">
                                             </div>    
                                             <div class="col">
                                                 <div><label>Middle Name</label></div>
-                                                <input type="text" name="txt_mname" class="form-control txt_mname" id="txt_mname" style="text-transform:uppercase" pattern="[A-Za-z ]+" onpaste="return false;" ondrop="return false;" autocomplete="off" value="<?php echo $db_mname; ?>">
+                                                <input type="text" name="txt_mname" class="form-control txt_mname" id="txt_mname" style="text-transform:uppercase" pattern="[A-Za-z ]+" onpaste="return false;" ondrop="return false;" autocomplete="off" value="<?php echo $db_mname; ?>" onblur="upperCaseIt()">
                                             </div>  
                                             <div class="col">
                                                 <div><label><span style= "color:red">* </span>Last Name</label></div>
-                                                <input type="text" name="txt_lname" class="form-control txt_lname" id="txt_lname" style="text-transform:uppercase" pattern="[A-Za-z ]+" onpaste="return false;" ondrop="return false;" autocomplete="off" value="<?php echo $db_lname; ?>">
+                                                <input type="text" name="txt_lname" class="form-control txt_lname" id="txt_lname" style="text-transform:uppercase" pattern="[A-Za-z ]+" onpaste="return false;" ondrop="return false;" autocomplete="off" value="<?php echo $db_lname; ?>" onblur="upperCaseIt()">
                                             </div>                                    
                                         </div>
                                     </div>
@@ -540,7 +540,7 @@
                                     </div>
                                     <div class="col">
                                         <div><label><span style= "color:red">* </span>Place of Birth</label></div>
-                                        <div><input class="form-control" name="txt_placeofbirth" type="text" maxlength="50" style="text-transform:uppercase" pattern="[a-zA-Z0-9\.\, ]+" onpaste="return false;" ondrop="return false;" autocomplete="off" value="<?php if($resCheck == 1){echo $db_birth_place;}else{echo "";}  ?>"></div>
+                                        <div><input class="form-control" name="txt_placeofbirth" id="txt_placeofbirth" type="text" maxlength="50" style="text-transform:uppercase" pattern="[a-zA-Z0-9\.\, ]+" onpaste="return false;" ondrop="return false;" autocomplete="off" value="<?php if($resCheck == 1){echo $db_birth_place;}else{echo "";}  ?>" onblur="upperCaseIt()"></div>
                                     </div>
                                     <div class="col">
                                         <div><label><span style= "color:red"></span>ID Type</label></div>
@@ -587,7 +587,7 @@
                                     </div>
                                     <div class="col">
                                         <div><label><span style= "color:red">* </span>ID Number</label></div>
-                                        <div><input class="form-control" name="txt_idnumber" type="text" style="text-transform:uppercase" onpaste="return false;" ondrop="return false;" autocomplete="off" value="<?php if($resCheck == 1){echo $db_id_number;}else{echo "";}  ?>"></div>
+                                        <div><input class="form-control" name="txt_idnumber" id="txt_idnumber" type="text" style="text-transform:uppercase" onpaste="return false;" ondrop="return false;" autocomplete="off" value="<?php if($resCheck == 1){echo $db_id_number;}else{echo "";}  ?>" onblur="upperCaseIt()"></div>
                                     </div>
                                     <!-- <div class="col">
                                         <div><label><span style= "color:red">* </span>ID Expiry Date</label></div>
@@ -635,15 +635,15 @@
                                 <div class="form-row"> 
                                     <div class="col-lg-2">
                                     <div><label><span style= "color:red">* </span>Mother's Maiden First Name</label></div>
-                                    <div><input class="form-control" name="txt_fmothername" type="text" style="text-transform:uppercase" pattern="[A-Za-z ]+" onpaste="return false;" ondrop="return false;" autocomplete="off" value="<?php echo $db_m_fname; ?>"></div>
+                                    <div><input class="form-control" name="txt_fmothername" id="txt_fmothername" type="text" style="text-transform:uppercase" pattern="[A-Za-z ]+" onpaste="return false;" ondrop="return false;" autocomplete="off" value="<?php echo $db_m_fname; ?> " onblur="upperCaseIt()"></div>
                                 </div>
                                 <div class="col-lg-2">
                                     <div><label>Mother's Maiden Middle Name</label></div>
-                                    <div><input class="form-control" name="txt_mmothername" type="text" style="text-transform:uppercase" pattern="[A-Za-z ]+" onpaste="return false;" ondrop="return false;" autocomplete="off" value="<?php echo $db_m_mname; ?>"></div>
+                                    <div><input class="form-control" name="txt_mmothername" id="txt_mmothername" type="text" style="text-transform:uppercase" pattern="[A-Za-z ]+" onpaste="return false;" ondrop="return false;" autocomplete="off" value="<?php echo $db_m_mname; ?> " onblur="upperCaseIt()"></div>
                                 </div>
                                 <div class="col-lg-2">
                                     <div><label><span style= "color:red">* </span>Mother's Maiden Last Name</label></div>
-                                    <div><input class="form-control" name="txt_lmothername" type="text" style="text-transform:uppercase" pattern="[A-Za-z ]+" onpaste="return false;" ondrop="return false;" autocomplete="off" value="<?php echo $db_m_lname; ?>"></div>
+                                    <div><input class="form-control" name="txt_lmothername" id="txt_lmothername" type="text" style="text-transform:uppercase" pattern="[A-Za-z ]+" onpaste="return false;" ondrop="return false;" autocomplete="off" value="<?php echo $db_m_lname; ?> " onblur="upperCaseIt()"></div>
                                 </div>
                                 <div class="col-lg-6">
                                     <?php
@@ -822,11 +822,11 @@
                                     
                                     <div class="col-xl col-lg col-sm-6">
                                         <div><label><span style= "color:red">* </span>Barangay</label></div>
-                                        <div><input class="form-control" id="txt_prebrgy" type="text" name="txt_prebrgy" placeholder="Brgy/ Village" style="text-transform:uppercase" pattern="[a-zA-Z0-9\.\, ]+" onpaste="return false;" ondrop="return false;" autocomplete="off" value="<?php if($resCheck){echo $db_present_barangay;}  ?>"></div>
+                                        <div><input class="form-control" id="txt_prebrgy" type="text" name="txt_prebrgy" placeholder="Brgy/ Village" style="text-transform:uppercase" pattern="[a-zA-Z0-9\.\, ]+" onpaste="return false;" ondrop="return false;" autocomplete="off" value="<?php if($resCheck){echo $db_present_barangay;}  ?>" onblur="upperCaseIt()"></div>
                                     </div>
                                     <div class="col-xl col-lg col-sm-6">
                                         <div><label><span style= "color:red">* </span>House/Bldg. No, Street</label></div>
-                                        <div><input class="form-control" id="txt_prestreet" type="text" name="txt_prestreet" placeholder="No., Street" style="text-transform:uppercase" pattern="[a-zA-Z0-9\.\, ]+" onpaste="return false;" ondrop="return false;" autocomplete="off" value="<?php if($resCheck){echo $db_present_street;} ?>"></div>
+                                        <div><input class="form-control" id="txt_prestreet" type="text" name="txt_prestreet" placeholder="No., Street" style="text-transform:uppercase" pattern="[a-zA-Z0-9\.\, ]+" onpaste="return false;" ondrop="return false;" autocomplete="off" value="<?php if($resCheck){echo $db_present_street;} ?>" onblur="upperCaseIt()"></div>
                                     </div>
                                     <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1">
                                         <div><label><span style= "color:red">* </span>Zip Code</label></div>
@@ -937,6 +937,45 @@
 <!-- MODAL -->
 <?php include('other/modalcropimage.php'); ?>
 
+<script>
+function upperCaseIt() {
+    var fname = document.getElementById("txt_fname");
+    fname.value = fname.value.toLocaleUpperCase();
+
+    var mname = document.getElementById("txt_mname");
+    mname.value = mname.value.toLocaleUpperCase();
+
+    var lname = document.getElementById("txt_lname");
+    lname.value = lname.value.toLocaleUpperCase();
+
+    var placeofbirth = document.getElementById("txt_placeofbirth");
+    placeofbirth.value = placeofbirth.value.toLocaleUpperCase();
+
+    var idnumber = document.getElementById("txt_idnumber");
+    idnumber.value = idnumber.value.toLocaleUpperCase();
+
+    var fmothername = document.getElementById("txt_fmothername");
+    fmothername.value = fmothername.value.toLocaleUpperCase();
+
+    var mmothername = document.getElementById("txt_mmothername");
+    mmothername.value = mmothername.value.toLocaleUpperCase();
+
+    var lmothername = document.getElementById("txt_lmothername");
+    lmothername.value = lmothername.value.toLocaleUpperCase();
+
+    var perbrgy = document.getElementById("txt_perbrgy");
+    perbrgy.value = perbrgy.value.toLocaleUpperCase();
+
+    var prebrgy = document.getElementById("txt_prebrgy");
+    prebrgy.value = prebrgy.value.toLocaleUpperCase();
+
+    var perstreet = document.getElementById("txt_perstreet");
+    perstreet.value = perstreet.value.toLocaleUpperCase();
+
+    var prestreet = document.getElementById("txt_prestreet");
+    prestreet.value = prestreet.value.toLocaleUpperCase();
+}
+</script>
 
 <script>
     $(document).ready(function(){
