@@ -15,7 +15,7 @@
                 <?php
                 $copyright="UniFAST © ".date("Y"); 
                 ?>
-                <p class="copyright"><?php echo utf8_decode($copyright); ?></p>
+                <p class="copyright"><?php echo ($copyright); ?></p>
             </footer>
         </div>
     </body>
