@@ -40,7 +40,7 @@ if(isset($_POST['btn_login'])){
         -- AND (a.status = 'Not Finalized' OR a.status = 'Finalized' OR a.status = 'Rejected' OR a.status = 'REQTOUNFINALIZE') 
         AND (a.tag = 'NEW' OR a.tag = 'ON-GOING' OR a.tag = 'ON-GOING LISTAHANAN' OR a.tag = 'FOR TESTING')
         AND a.active_grantee = 'YES'
-        -- AND a.hei_uii = 'ase123123qase'
+        AND a.hei_uii = 'ase123123qase'
         ";
 
         // (b.hei_region_nir = '05 - Bicol Region' OR b.hei_region_nir = '06 - Western Visayas' OR b.hei_region_nir = '13 - NCR' OR b.hei_region_nir = '01 - Ilocos Region' OR b.hei_region_nir = '08 - Eastern Visayas' OR b.hei_region_nir = '11 - Davao Region' OR b.hei_region_nir = '03 - Central Luzon' OR b.hei_region_nir = '15 - BARMM' OR b.hei_region_nir = '15A - BARMM' OR b.hei_region_nir = '15B - BARMM' OR b.hei_region_nir = '16 - Caraga' OR b.hei_region_nir = '12 - Soccsksargen' OR b.hei_region_nir = '10 - Northern Mindanao' OR b.hei_region_nir = '17 - MIMAROPA' OR b.hei_region_nir = '07 - Central Visayas' OR b.hei_region_nir = '09 - Zamboanga Peninsula' OR b.hei_region_nir = '05 - Bicol Region' OR b.hei_region_nir = '06 - Western Visayas' OR b.hei_region_nir = '13 - NCR' OR b.hei_region_nir = '01 - Ilocos Region' OR b.hei_region_nir = '08 - Eastern Visayas' OR b.hei_region_nir = '11 - Davao Region' OR b.hei_region_nir = '03 - Central Luzon' OR b.hei_region_nir = '15 - BARMM' OR b.hei_region_nir = '15A - BARMM' OR b.hei_region_nir = '15B - BARMM' OR b.hei_region_nir = '16 - Caraga' OR b.hei_region_nir = '12 - Soccsksargen' OR b.hei_region_nir = '10 - Northern Mindanao' OR b.hei_region_nir = '02 - Cagayan Valley' OR b.hei_region_nir = '04 - CALABARZON' OR b.hei_region_nir = '14 - CAR' OR )";
