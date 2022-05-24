@@ -65,7 +65,7 @@ if(isset($_POST['btn_login'])){
                 
         }
         else{
-            $msglogin = "Failed to login? Possible reasons are: <br><br>1) You entered an incorrect credential<br>2) Your TES data is being validated at the moment<br>3) Your TES data did not passed the validation. <br><br> Please follow the UniFAST official page at <a href='https://www.facebook.com/unifastofficial' target='_blank'>www.facebook.com/unifastofficial</a> for more information and to see the latest news and announcements. <br><br>";
+            $msglogin = "Failed to login? Possible reasons are: <br><br>1) You entered an incorrect credential<br>2) Your TES data is being validated at the moment<br>3) Your TES data did not pass the validation. <br><br> Please follow the UniFAST official page at <a href='https://www.facebook.com/unifastofficial' target='_blank'>www.facebook.com/unifastofficial</a> for more information and to see the latest news and announcements. <br><br>";
             header("location: ../index.php?notmatchedlogin=".$msglogin);
         }
     }
