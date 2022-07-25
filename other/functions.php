@@ -37,7 +37,6 @@ if(isset($_POST['btn_login'])){
     else{
         /* ACCESS FOR SPECIFIC REGION */
         $sql = "SELECT * FROM tbl_lbp_form a INNER JOIN tbl_heis b ON a.hei_uii = b.hei_uii WHERE a.award_no ='$awardeenum' AND a.password = MD5('$password') 
-        -- AND (a.status = 'Not Finalized' OR a.status = 'Finalized' OR a.status = 'Rejected' OR a.status = 'REQTOUNFINALIZE') 
         AND (a.tag = 'NEW' OR a.tag = 'ON-GOING' OR a.tag = 'ON-GOING LISTAHANAN' OR a.tag = 'FOR TESTING')
         AND a.active_grantee = 'YES'
         -- AND a.hei_uii = 'ase123123qase'
