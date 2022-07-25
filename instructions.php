@@ -25,7 +25,7 @@
         <div>
             <div class="container" style="background-color:rgba(255,255,255,0.9); color:#737373; padding-top:20px;  padding-bottom:20px; border-radius:7px;">
                 <div>
-                    <div style="background-image:url('image/heading.png');background-repeat: no-repeat;background-size: 500px 43px;padding:10px;padding-left:40px;color:white;">
+                    <div style="background-image:url('image/heading.webp');background-repeat: no-repeat;background-size: 500px 43px;padding:10px;padding-left:40px;color:white;">
                         <h4><b> What is UniFAST LANDBANK Form</b></h4>
                     </div>
                 </div>
@@ -36,7 +36,7 @@
                     </div>
                 </div><br>
                 <div>
-                    <div style="background-image:url('image/heading.png');background-repeat: no-repeat;background-size: 500px 43px;padding:10px;padding-left:40px;color:white;">
+                    <div style="background-image:url('image/heading.webp');background-repeat: no-repeat;background-size: 500px 43px;padding:10px;padding-left:40px;color:white;">
                         <h4><b> Instructions</b></h4>
                     </div>
                 </div>
@@ -51,8 +51,8 @@
                             <p align = "justify" style="margin:30px; margin-bottom:10px;text-indent:40px;">Go to the actual form by clicking the "LANDBANK Form" from the upper left side of the navigation menu.</p>
                         </div>
                         <div class="col-lg-4" style="background-color:#97989a;margin-right:10px;padding-bottom:10px;"><label style="color:white;">Click to see example image.</label>
-                            <a href="image/gotonavigation.png" target="_blank">
-                                <div class="card" style="background-color:rgba(255,0,0,0.0);border-color:rgba(255,0,0,0.0);"><img class="img-fluid card-img-top w-100 d-block" src="image/gotonavigation.png"></div>
+                            <a href="image/gotonavigation.webp" target="_blank">
+                                <div class="card" style="background-color:rgba(255,0,0,0.0);border-color:rgba(255,0,0,0.0);"><img class="img-fluid card-img-top w-100 d-block" src="image/gotonavigation.webp"></div>
                             </a>
                         </div>
                     </div>
@@ -66,7 +66,7 @@
                         </div>
                         <div class="col-lg-4" style="background-color:#97989a;margin-right:10px;padding-bottom:10px;"><label style="color:white;">Click to see example image.<br></label>
                             <a href="image/landbankformpage.png" target="_blank">
-                                <div class="card"><img class="img-fluid card-img-top card-img-bottom w-100 d-block" src="image/landbankformpage.png"></div>
+                                <div class="card"><img class="img-fluid card-img-top card-img-bottom w-100 d-block" src="image/landbankformpage.webp"></div>
                             </a>
                         </div>
                     </div>
@@ -76,24 +76,24 @@
                     <div class="row">
                         <div class="col">
                         <p align = "justify" style="margin:30px; margin-bottom:10px;text-indent:40px;">The next section is the Personal Information. In this section you will see a button where you can upload your photo. Click the "Choose File" and select your photo. After you select your photo, another window will appear where you can drag and resize your photo. Please note that your photo is valid only if it is set properly <i>(see example of valid photo below)</i>.</p>
-                        <p align = "justify" style="margin:30px; margin-bottom:10px;text-indent:40px;"><img class="img-fluid card-img-top w-100 d-block" src="image/samplephoto.png"></p>
+                        <p align = "justify" style="margin:30px; margin-bottom:10px;text-indent:40px;"><img class="img-fluid card-img-top w-100 d-block" src="image/samplephoto.webp"></p>
                         <p align = "justify" style="margin:30px; margin-bottom:10px;text-indent:40px;">Forms with improper photo may not accept by the LANDBANK.</p>
                         <p align = "justify" style="margin:30px; margin-bottom:10px;text-indent:40px;">Your ID is also necessary for verification purposes. To upload your ID, click the "Choose File" from ID Image (Front) for front side or ID Image (Back) for back side and choose the appropriate photo that shows the whole card with clear image of your photo and signature.</p>
                         <p align = "justify" style="margin:30px; margin-bottom:10px;text-indent:40px;">You will also see grayed out text fields, those fields are not intended to be editable because it is the data you already provided during the TES Application. Skip those grayed out text field and proceed to the white editable text fields and to the preceeding sections.</p>
                         </div>
                         <div class="col-lg-4 order-2" style="background-color:#97989a;margin-right:10px;"><label style="color:white;">Click to see example image.<br></label>
-                            <a href="image/personalinfo.png" target="_blank">
-                                <div class="card" style="margin-bottom:50px;"><img class="img-fluid card-img-top card-img-bottom w-100 d-block" src="image/personalinfo.png"></div>
+                            <a href="image/personalinfo.webp" target="_blank">
+                                <div class="card" style="margin-bottom:50px;"><img class="img-fluid card-img-top card-img-bottom w-100 d-block" src="image/personalinfo.webp"></div>
                             </a>
-                            <a href="image/cropresize.png" target="_blank">
-                                <div class="card" style="margin-bottom:10px;"><img class="img-fluid card-img-top card-img-bottom w-100 d-block" src="image/cropresize.png"></div>
+                            <a href="image/cropresize.webp" target="_blank">
+                                <div class="card" style="margin-bottom:10px;"><img class="img-fluid card-img-top card-img-bottom w-100 d-block" src="image/cropresize.webp"></div>
                             </a>
-                            <a href="image/personalinfo2.png" target="_blank">
-                                <div class="card" style="margin-bottom:50px;"><img class="img-fluid card-img-top card-img-bottom w-100 d-block" src="image/personalinfo2.png"></div>
+                            <a href="image/personalinfo2.webp" target="_blank">
+                                <div class="card" style="margin-bottom:50px;"><img class="img-fluid card-img-top card-img-bottom w-100 d-block" src="image/personalinfo2.webp"></div>
                             </a>
                             
-                            <a href="image/uploadingofid.png" target="_blank">
-                                <div class="card" style="margin-bottom:50px;"><img class="img-fluid card-img-top card-img-bottom w-100 d-block" src="image/uploadingofid.png"></div>
+                            <a href="image/uploadingofid.webp" target="_blank">
+                                <div class="card" style="margin-bottom:50px;"><img class="img-fluid card-img-top card-img-bottom w-100 d-block" src="image/uploadingofid.webp"></div>
                             </a>
                         </div>
                     </div>
@@ -106,8 +106,8 @@
                             <p align = "justify" style="margin:30px; margin-bottom:10px;text-indent:40px;">In Emboss section, type the name you want to appear on the card. This field allows up to 22 characters only. Please make sure that your emboss name contains your <b>First Name</b> or <b>Last Name</b>.</p>
                         </div>
                         <div class="col-lg-4" style="background-color:#97989a;margin-right:10px;"><label style="color:white;">Click to see example image.<br></label>
-                            <a href="image/emboss.png" target="_blank">
-                                <div class="card"><img class="img-fluid card-img-top card-img-bottom w-100 d-block" src="image/emboss.png"></div>
+                            <a href="image/emboss.webp" target="_blank">
+                                <div class="card"><img class="img-fluid card-img-top card-img-bottom w-100 d-block" src="image/emboss.webp"></div>
                             </a>
                         </div>
                     </div>
@@ -121,8 +121,8 @@
                             <p align = "justify" style="margin:30px; margin-bottom:10px;text-indent:40px;">Your School Administrator will inform you if your application is rejected. The form page will be editable again for you to correct the detail that caused the rejection of your application.</p>
                         </div>
                         <div class="col-lg-4" style="background-color:#97989a;margin-right:10px;padding-bottom:10px;"><label style="color:white;">Click to see example image.<br></label>
-                            <a href="image/saveexport.png" target="_blank">
-                                <div class="card"><img class="img-fluid card-img-top card-img-bottom w-100 d-block" src="image/saveexport.png"></div>
+                            <a href="image/saveexport.webp" target="_blank">
+                                <div class="card"><img class="img-fluid card-img-top card-img-bottom w-100 d-block" src="image/saveexport.webp"></div>
                             </a>
                         </div>
                     </div>
