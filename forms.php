@@ -258,7 +258,7 @@
                                                 echo "<div class='form-row' style='background-color:#FEEFB3;text-align:center;border-radius:7px;padding-top:10px;padding-bottom:10px;'>
                                                     <div class='col'>
                                                         <span style='color:#9F6000;font-size:20px;'>
-                                                            Status: <b>Finalized</b><br>You already finalized your application. You can view the Generated Form from <a href='application_form.php' target='_blank'>here</a>
+                                                            Status: <b>Finalized</b><br>You already finalized your application. You can view the Generated Form from <a href='application_form.php' target='_blank'>here</a>. To proceed on the next process, please advise the assigned <b>Focal Person</b> in your school to review your application and submit through the HEI Portal.
                                                         </span>
                                                     </div>
                                                 </div>";
