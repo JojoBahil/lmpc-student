@@ -21,7 +21,7 @@
                 <form method="post" action="other/functions.php">
                     
                     <h2 class="sr-only">Login Form</h2>
-                    <div class="illustration" style="margin-bottom:-5px;"><img></div><br><center>
+                    <div class="illustration"><img></div><br><center>
                     <!-- <span style="font-size:13px; color:#ff0000"><i><b></b>Temporary Closed for scheduled exporting to LANDBANK</i></span><br>
                     <span style="font-size:13px;"><i><b>February 02, 2022</b> - Resume of LMPC Applications</i></span><br><br></center> -->
                     <?php

@@ -322,7 +322,7 @@
                                     ?>
                                 </div>
                             </div><br><br>
-                            <div class="form-row h4titles" style="margin-top:-30px;"><h4><b>LANDBANK Branch</b></h4></div>
+                            <div class="form-row h4titles" style="margin-top:-30px;"><h4><b>Pickup Location</b></h4></div>
                             <div class="form-row">                                                           
                                 <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12">
                                     <div class="pickupdiv">
@@ -401,7 +401,7 @@
                                                         echo "<img src = '$path' alt = 'Please upload your photo' width = '230' height = '230' style='border: 3px solid #fbfbfb; border-radius: 4px; padding: 5px; border-style: outset; box-shadow: 10px 10px 8px #888888;'><br>";
                                                     }
                                                     else{
-                                                        echo "<img src = 'image/studentupload/default-blank.png' alt = 'Please upload your photo' width = '230' height = '230' style='border: 3px solid #fbfbfb; border-radius: 4px; padding: 5px; border-style: outset; box-shadow: 10px 10px 8px #888888;'><br>";
+                                                        echo "<img src = 'image/defaultImage.webp' alt = 'Please upload your photo' width = '230' height = '230' style='border: 3px solid #fbfbfb; border-radius: 4px; padding: 5px; border-style: outset; box-shadow: 10px 10px 8px #888888;'><br>";
                                                     }
                                                 ?>
                                             </div>
