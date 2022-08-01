@@ -40,7 +40,7 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
-<body style="background-image:url('image/background2.png');">
+<body style="background-image:url('image/background2.webp');">
     <div>
         <div class="container" style="background-color:rgba(255,255,255,0.9); color:#737373; padding-top:20px;  padding-bottom:20px; border-radius:7px;background-attachment: fixed; background-position: center;">
     <div style="background-image:url('image/heading.png');background-repeat: no-repeat;background-size: 500px 43px;padding:10px;padding-left:40px;color:white;">

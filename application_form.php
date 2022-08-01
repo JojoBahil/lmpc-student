@@ -20,7 +20,7 @@
         <link rel="stylesheet" href="assets/css/instruction.css">
         <link rel="stylesheet" href="assets/css/all.min.css">
     </head>
-    <body style="background-image:url('image/background2.png');background-attachment: fixed; background-position: center;">
+    <body style="background-image:url('image/background2.webp');background-attachment: fixed; background-position: center;">
         <div class="container" style="background-color:rgba(255,255,255,0.9); color:#737373; padding-top:20px;  padding-bottom:20px; border-radius:7px;">
             <div class='row'>
                 <div class='col' align='center'>

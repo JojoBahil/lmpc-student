@@ -6,7 +6,7 @@
                     <h4 class="modal-title">Warning</h4>  
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>  
-                <div class="modal-body" id="student_detail" style="">
+                <div class="modal-body" id="student_detail" >
                     <p style="text-indent: 50px;">Finalizing the form will disable the save button and you will not be able to update your information. Please make sure that all information are correct before you continue to export the filled out form.</p>
                     <p style="text-indent: 50px;">Click continue to export the form or cancel to go back to update you information.</p>
                     <br>

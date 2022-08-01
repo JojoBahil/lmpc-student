@@ -134,7 +134,7 @@
       }
     </script>
 
-    <body style="background-image:url('image/background2.png');background-attachment: fixed; background-position: center;">
+    <body style="background-image:url('image/background2.webp');background-attachment: fixed; background-position: center;">
         <?php
            include('navigation.php');
             $awardeenum = $_SESSION['awardeenumber'];

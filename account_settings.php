@@ -30,7 +30,7 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
-<body style="background-image:url('image/background2.png');">
+<body style="background-image:url('image/background2.webp');">
     <div class="container" style="background-color:rgba(255,255,255,0.9); color:#737373; padding-top:20px;  padding-bottom:20px; border-radius:7px;background-attachment: fixed; background-position: center;">
         <form action = "other/functions.php" method = "POST">  
 
