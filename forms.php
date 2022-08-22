@@ -147,7 +147,6 @@
                 while($row=mysqli_fetch_array($results)){
                     $db_app_id = $row['app_id'];
                     $db_award_no = $row['award_no'];
-//                     $db_ac_year = $row['ac_year'];
                     $db_fname = $row['fname'];
                     $db_lname = $row['lname'];
                     $db_mname = $row['mname'];
@@ -166,13 +165,11 @@
                     $db_permanent_street = $row['permanent_street'];
                     $db_permanent_barangay = $row['permanent_barangay'];
                     $db_permanent_city = $row['permanent_city'];
-                    //$db_permanent_citymm = $row['permanent_citymm'];
                     $db_permanent_province = $row['permanent_province'];
                     $db_permanent_zip = $row['permanent_zip'];
                     $db_present_street = $row['present_street'];
                     $db_present_barangay = $row['present_barangay'];
                     $db_present_city = $row['present_city'];
-                    //$db_present_citymm = $row['present_citymm'];
                     $db_present_province = $row['present_province'];
                     $db_present_zip = $row['present_zip'];
                     $db_contact = $row['contact'];
@@ -531,10 +528,48 @@
                                 <div class="form-row" style='margin-left:-5px;margin-right:-5px;margin-top:10px;'>
                                     <div class="col-xl-4 col-lg-4" style='padding-top:10px;'>
                                         <div>
-                                            <div style="margin-top:-10px;"><label><span style= "color:red">* </span>ID Front Image (2mb max.) <?php if($db_status == "Not Finalized" || $db_status == "Finalized"){if(!empty($db_id_front_photo)){ echo '<b><a href="'.substr($db_id_front_photo,1).'" target="_blank">Attached</a></b>';}else{ echo '';}}elseif($db_status == "Rejected"){echo '<b style="color:red;">Re-upload Image</b>';}else{ echo '<b>Attached</b>';}?></label></div>
+                                            <div style="margin-top:-10px;">
+                                                <label>
+                                                    <span style= "color:red">* 
+                                                    </span>ID Front Image (2mb max.) 
+                                                    <?php 
+                                                        if($db_status == "Not Finalized" || $db_status == "Finalized"){
+                                                            if(!empty($db_id_front_photo) && file_exists(substr($db_id_front_photo,1))){ 
+                                                                echo '<b><a href="'.substr($db_id_front_photo,1).'" target="_blank">Attached</a></b>';
+                                                            }
+                                                            else{ 
+                                                                echo '';
+                                                            }
+                                                        }elseif($db_status == "Rejected"){
+                                                            if(!empty($db_id_front_photo) && file_exists(substr($db_id_front_photo,1))){
+                                                                echo '<b><a href="'.substr($db_id_front_photo,1).'" target="_blank">Attached</a></b>';
+                                                            }
+                                                            else{
+                                                                echo '<b style="color:red;">Re-upload Image</b>';
+                                                            }
+                                                        }
+                                                        else{ 
+                                                            echo '<b>Attached</b>';
+                                                        }
+                                                    ?>
+                                                    </label>
+                                                </div>
                                             <div style="background-color:#ddd;">
-                                                <input type="file" <?php if(!empty($db_id_front_photo)){if($db_status == "Rejected"){echo "";}else{echo "hidden";}} ?> name="file_idfront" id="file_idfront" class="btn file_idfront" accept="image/jpeg"  <?php if($db_status == "Finalized"){echo "disabled";} ?>>
-                                                <input type="button" <?php if(empty($db_id_front_photo) || $db_status == "Rejected"){echo "hidden";} ?> name="btn_changeidfront" id="btn_changeidfront" class="btn btn-warning btn_changeidfront" value="Change Image" <?php if($db_status == "Finalized"){echo "disabled";} ?>>
+                                                <input type="file" 
+                                                    <?php 
+                                                        if(!empty($db_id_front_photo)){
+                                                            if(file_exists(substr($db_id_front_photo,1))){
+                                                                if($db_status == "Rejected" || $db_status == "Not Finalized" || $db_status == "Finalized"){
+                                                                    echo "hidden";
+                                                                }
+                                                            }
+                                                            else{
+                                                                echo "";
+                                                            }
+                                                        } 
+                                                    ?> 
+                                                name="file_idfront" id="file_idfront" class="btn file_idfront" accept="image/jpeg"  <?php if($db_status == "Finalized"){echo "disabled";} ?>>
+                                                <input type="button" <?php if((empty($db_id_front_photo) && file_exists(substr($db_id_front_photo,1)) == false)){echo "hidden";} ?> name="btn_changeidfront" id="btn_changeidfront" class="btn btn-warning btn_changeidfront" value="Change Image" <?php if($db_status == "Finalized"){echo "disabled";} ?>>
                                             </div>                                            
                                         </div>
                                     </div>
@@ -600,10 +635,48 @@
                                 <div class="form-row" style='margin-left:-5px;margin-right:-5px;margin-top:20px;'>
                                     <div class="col-xl-4 col-lg-4" style='padding-top:10px;'>
                                         <div>
-                                            <div style="margin-top:-10px;"><label><span style= "color:red">* </span>ID Back Image (2mb max.) <?php if($db_status == "Not Finalized" || $db_status == "Finalized"){if(!empty($db_id_back_photo)){ echo '<b><a href="'.substr($db_id_back_photo,1).'" target="_blank">Attached</a></b>';}else{ echo '';}}elseif($db_status == "Rejected"){echo '<b style="color:red;">Re-upload Image</b>';}else{ echo '<b>Attached</b>';}?></label></div>
+                                            <div style="margin-top:-10px;">
+                                                <label>
+                                                    <span style= "color:red">* 
+                                                    </span>ID Back Image (2mb max.) 
+                                                    <?php 
+                                                        if($db_status == "Not Finalized" || $db_status == "Finalized"){
+                                                            if(!empty($db_id_back_photo) && file_exists(substr($db_id_back_photo,1))){ 
+                                                                echo '<b><a href="'.substr($db_id_back_photo,1).'" target="_blank">Attached</a></b>';
+                                                            }
+                                                            else{ 
+                                                                echo '';
+                                                            }
+                                                        }elseif($db_status == "Rejected"){
+                                                            if(!empty($db_id_back_photo) && file_exists(substr($db_id_back_photo,1))){
+                                                                echo '<b><a href="'.substr($db_id_back_photo,1).'" target="_blank">Attached</a></b>';
+                                                            }
+                                                            else{
+                                                                echo '<b style="color:red;">Re-upload Image</b>';
+                                                            }
+                                                        }
+                                                        else{ 
+                                                            echo '<b>Attached</b>';
+                                                        }
+                                                    ?>
+                                                </label>
+                                            </div>
                                             <div style="background-color:#ddd;">
-                                                <input type="file" <?php if(!empty($db_id_back_photo)){if($db_status == "Rejected"){echo "";}else{echo "hidden";}} ?> name="file_idback" id="file_idback" class="btn file_idback" accept="image/x-png,image/jpeg"  <?php if($db_status == "Finalized"){echo "disabled";} ?>>
-                                                <input type="button" <?php if(empty($db_id_back_photo) || $db_status == "Rejected"){echo "hidden";} ?> name="btn_changeidback" id="btn_changeidback" class="btn btn-warning btn_changeidback" value="Change Image" <?php if($db_status == "Finalized"){echo "disabled";} ?>>
+                                                <input type="file" 
+                                                <?php 
+                                                    if(!empty($db_id_back_photo)){
+                                                        if(file_exists(substr($db_id_back_photo,1))){
+                                                            if($db_status == "Rejected" || $db_status == "Not Finalized" || $db_status == "Finalized"){
+                                                                echo "hidden";
+                                                            }
+                                                        }
+                                                        else{
+                                                            echo "";
+                                                        }
+                                                    } 
+                                                ?>                                                 
+                                                name="file_idback" id="file_idback" class="btn file_idback" accept="image/x-png,image/jpeg"  <?php if($db_status == "Finalized"){echo "disabled";} ?>>
+                                                <input type="button" <?php if(empty($db_id_back_photo) && file_exists(substr($db_id_back_photo,1)) == false){echo "hidden";} ?> name="btn_changeidback" id="btn_changeidback" class="btn btn-warning btn_changeidback" value="Change Image" <?php if($db_status == "Finalized"){echo "disabled";} ?>>
                                             </div>
                                         </div>
                                     </div>
