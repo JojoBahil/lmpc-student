@@ -393,7 +393,7 @@
                                         <div class="col" style='padding-top:10px;margin-top:10px;'>
                                             <div style='text-align:center' id='uploaded_image'>
                                                 <?php
-                                                    if($db_photo){
+                                                    if($db_photo && file_exists(substr($db_photo, 3))){
                                                         $path = substr($db_photo, 3);
                                                         echo "<img src = '$path' alt = 'Please upload your photo' width = '230' height = '230' style='border: 3px solid #fbfbfb; border-radius: 4px; padding: 5px; border-style: outset; box-shadow: 10px 10px 8px #888888;'><br>";
                                                     }
@@ -408,8 +408,8 @@
                                         <div class="col" style='padding-top:10px;'>
                                             <div>
                                                 <div>
-                                                    <input type="file" <?php if(!empty($db_photo)){echo "hidden";} ?> name="file_photo" id="file_photo" class="btn file_photo" accept="image/jpeg" <?php if($db_status == "Finalized"){echo "disabled";} ?>>
-                                                    <input type="button" <?php if(empty($db_photo)){echo "hidden";} ?> name="btn_changephoto" id="btn_changephoto" class="btn btn-warning btn_changephoto" value="Change Image" <?php if($db_status == "Finalized"){echo "disabled";} ?>>
+                                                    <input type="file" <?php if(!empty($db_photo) && file_exists(substr($db_photo, 3))){echo "hidden";} ?> name="file_photo" id="file_photo" class="btn file_photo" accept="image/jpeg" <?php if($db_status == "Finalized"){echo "disabled";} ?>>
+                                                    <input type="button" <?php if(empty($db_photo) || file_exists(substr($db_photo, 3)) == false){echo "hidden";} ?> name="btn_changephoto" id="btn_changephoto" class="btn btn-warning btn_changephoto" value="Change Image" <?php if($db_status == "Finalized"){echo "disabled";} ?>>
                                                 </div>
                                                 <div style="padding-top:10px;"></div>
                                             </div>
@@ -569,7 +569,7 @@
                                                         } 
                                                     ?> 
                                                 name="file_idfront" id="file_idfront" class="btn file_idfront" accept="image/jpeg"  <?php if($db_status == "Finalized"){echo "disabled";} ?>>
-                                                <input type="button" <?php if((empty($db_id_front_photo) && file_exists(substr($db_id_front_photo,1)) == false)){echo "hidden";} ?> name="btn_changeidfront" id="btn_changeidfront" class="btn btn-warning btn_changeidfront" value="Change Image" <?php if($db_status == "Finalized"){echo "disabled";} ?>>
+                                                <input type="button" <?php if((empty($db_id_front_photo) || file_exists(substr($db_id_front_photo,1)) == false)){echo "hidden";} ?> name="btn_changeidfront" id="btn_changeidfront" class="btn btn-warning btn_changeidfront" value="Change Image" <?php if($db_status == "Finalized"){echo "disabled";} ?>>
                                             </div>                                            
                                         </div>
                                     </div>
@@ -676,7 +676,7 @@
                                                     } 
                                                 ?>                                                 
                                                 name="file_idback" id="file_idback" class="btn file_idback" accept="image/x-png,image/jpeg"  <?php if($db_status == "Finalized"){echo "disabled";} ?>>
-                                                <input type="button" <?php if(empty($db_id_back_photo) && file_exists(substr($db_id_back_photo,1)) == false){echo "hidden";} ?> name="btn_changeidback" id="btn_changeidback" class="btn btn-warning btn_changeidback" value="Change Image" <?php if($db_status == "Finalized"){echo "disabled";} ?>>
+                                                <input type="button" <?php if((empty($db_id_back_photo) || file_exists(substr($db_id_back_photo,1)) == false)){echo "hidden";} ?> name="btn_changeidback" id="btn_changeidback" class="btn btn-warning btn_changeidback" value="Change Image" <?php if($db_status == "Finalized"){echo "disabled";} ?>>
                                             </div>
                                         </div>
                                     </div>
@@ -973,13 +973,109 @@
                         ?>
 <!--                         <input type="hidden" name="txt_emboss" value="<?php echo $emboss; ?>"> -->
                         
-                        
+                        <?php
+                        // FIELD VALIDATION FOR ENABLING THE FINALIZE BUTTON
+                            $completeInput = '';
+
+                            if(empty($db_fname) || $db_fname == NULL || strlen($db_fname) == 0){
+                                $completeInput = 'disabled';
+                            }
+                            elseif(empty($db_lname) || $db_lname == NULL || strlen($db_lname) == 0){
+                                $completeInput = 'disabled';
+                            }
+                            elseif(empty($db_title) || $db_title == NULL || strlen($db_title) == 0){
+                                $completeInput = 'disabled';
+                            }
+                            elseif(empty($db_marital_status) || $db_marital_status == NULL || strlen($db_marital_status) == 0){
+                                $completeInput = 'disabled';
+                            }
+                            elseif(empty($db_gender) || $db_gender == NULL || strlen($db_gender) == 0){
+                                $completeInput = 'disabled';
+                            }
+                            elseif(empty($db_dobirth) || $db_dobirth == NULL || strlen($db_dobirth) == 0){
+                                $completeInput = 'disabled';
+                            }
+                            elseif(empty($db_m_fname) || $db_m_fname == NULL || strlen($db_m_fname) == 0){
+                                $completeInput = 'disabled';
+                            }
+                            elseif(empty($db_m_lname) || $db_m_lname == NULL || strlen($db_m_lname) == 0){
+                                $completeInput = 'disabled';
+                            }
+                            elseif(empty($db_birth_place) || $db_birth_place == NULL || strlen($db_birth_place) == 0){
+                                $completeInput = 'disabled';
+                            }
+                            elseif(empty($db_permanent_street) || $db_permanent_street == NULL || strlen($db_permanent_street) == 0){
+                                $completeInput = 'disabled';
+                            }
+                            elseif(empty($db_permanent_barangay) || $db_permanent_barangay == NULL || strlen($db_permanent_barangay) == 0){
+                                $completeInput = 'disabled';
+                            }
+                            elseif(empty($db_permanent_city) || $db_permanent_city == NULL || strlen($db_permanent_city) == 0){
+                                $completeInput = 'disabled';
+                            }
+                            elseif(empty($db_permanent_province) || $db_permanent_province == NULL || strlen($db_permanent_province) == 0){
+                                $completeInput = 'disabled';
+                            }
+                            elseif(empty($db_permanent_zip) || $db_permanent_zip == NULL || strlen($db_permanent_zip) == 0){
+                                $completeInput = 'disabled';
+                            }
+                            elseif(empty($db_present_street) || $db_present_street == NULL || strlen($db_present_street) == 0){
+                                $completeInput = 'disabled';
+                            }
+                            elseif(empty($db_present_barangay) || $db_present_barangay == NULL || strlen($db_present_barangay) == 0){
+                                $completeInput = 'disabled';
+                            }
+                            elseif(empty($db_present_city) || $db_present_city == NULL || strlen($db_present_city) == 0){
+                                $completeInput = 'disabled';
+                            }
+                            elseif(empty($db_present_province) || $db_present_province == NULL || strlen($db_present_province) == 0){
+                                $completeInput = 'disabled';
+                            }
+                            elseif(empty($db_present_zip) || $db_present_zip == NULL || strlen($db_present_zip) == 0){
+                                $completeInput = 'disabled';
+                            }
+                            elseif(empty($db_contact) || $db_contact == NULL || strlen($db_contact) == 0){
+                                $completeInput = 'disabled';
+                            }
+                            elseif(empty($db_email) || $db_email == NULL || strlen($db_email) == 0){
+                                $completeInput = 'disabled';
+                            }
+                            elseif(empty($db_id_number) || $db_id_number == NULL || strlen($db_id_number) == 0){
+                                $completeInput = 'disabled';
+                            }
+                            elseif(empty($db_emboss_name) || $db_emboss_name == NULL || strlen($db_emboss_name) == 0){
+                                $completeInput = 'disabled';
+                            }
+                            elseif(empty($db_tin) || $db_tin == NULL || strlen($db_tin) == 0){
+                                $completeInput = 'disabled';
+                            }
+                            elseif(empty($db_mothermaiden) || $db_mothermaiden == NULL || strlen($db_mothermaiden) == 0){
+                                $completeInput = 'disabled';
+                            }
+                            elseif((empty($db_photo) || $db_photo == NULL || strlen($db_photo) == 0) || !file_exists(substr($db_photo,1))){
+                                $completeInput = 'disabled';
+                            }
+                            elseif((empty($db_id_front_photo) || $db_id_front_photo == NULL || strlen($db_id_front_photo) == 0) || !file_exists(substr($db_id_front_photo,1))){
+                                $completeInput = 'disabled';
+                            }
+                            elseif((empty($db_id_back_photo) || $db_id_back_photo == NULL || strlen($db_id_back_photo) == 0) || !file_exists(substr($db_id_back_photo,1))){
+                                $completeInput = 'disabled';
+                            }
+                        ?>
                         
                         <div class="form-group">
                             <div class="form-row">
+                                <?php
+                                    if($completeInput == 'disabled'){
+                                        echo "<p style='font-size: 10px;width:100%; text-align:center;'><i>The <b>Finalize</b> button is disabled until all required information and images are saved and uploaded to the portal.</i></p>";
+                                    }
+                                ?>
+                            </div>
+                            <div class="form-row">
+                                
                                 <div class="col" style="text-align:center"><button class="btn btn-primary save" name="btn_save" type="submit" style="width:110px;margin-right:15px;" <?php if($db_status == "Finalized"){echo "disabled";} ?>><i class="fa fa-save" style="margin-right:10px;" ></i>Save</button>
                                 <!--<button class="btn btn-success save" type="submit" style="width:110px;" name="btn_export"><i class="fa fa-file-export" style="margin-right:10px;"></i>Export</button>-->
-                                <input type="button" class="btn btn-success btn_ view_data btn_export1" value="Finalize" data-toggle="modal" id="btn_export" name="btn_export" data-target="#modal_profile" style="margin-right:10px;width:110px;margin-right:15px;" <?php if($db_status == "Finalized"){echo "disabled";} ?> >
+                                <input type="button" class="btn btn-success btn_ view_data btn_export1" value="Finalize" data-toggle="modal" id="btn_export" name="btn_export" data-target="#modal_profile" style="margin-right:10px;width:110px;margin-right:15px;" <?php if($db_status == "Finalized"){echo "disabled";} echo $completeInput; ?> >
                                 </div>
                             </div>
                         </div>

@@ -26,10 +26,6 @@ if(isset($_POST['btn_login'])){
 
     $awardeenum = mysqli_real_escape_string($conn, $_POST['awardeenum']);
     $password = mysqli_real_escape_string($conn, $_POST['password']);
-
-    // $awardeenum = $_POST['awardeenum'];
-    // $password = $_POST['password'];
-
     if(empty($awardeenum) || empty($password)){
         $msglogin = "Awardee Number and Password is required";
         header('location: ../index.php?emptylogin='.$msglogin);
@@ -87,20 +83,6 @@ elseif(isset($_POST['btn_disagree'])){
 
 //Change Student Password
 if(isset($_POST['btn_change_password'])){
-    
-    /*
-    $sqlCurrentPassword = "SELECT password FROM vw_complete_teslbp_data_2019_2020 WHERE award_no = '$GLOBALawardeenumber'";
-    $resCurrentPassword = mysqli_query($conn, $sqlCurrentPassword);
-    $checkCurrentPassword = mysqli_num_rows($resCurrentPassword);
-    if($checkCurrentPassword > 0){
-        while($row = mysqli_fetch_assoc($resCurrentPassword)){
-           $realCurrentPassword = mysqli_real_escape_string($conn, $row['password']);
-        }        
-    }
-    else{
-        $realCurrentPassword = 'not found';
-    }
-    */
     
     $currentpassword = $_POST['txt_current_password'];
     $newpassword = $_POST['txt_new_password'];
