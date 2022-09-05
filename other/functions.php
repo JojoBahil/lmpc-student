@@ -596,7 +596,6 @@ if(isset($_POST['btn_export'])){
         if ($resultCheck == 1){
             $db_app_id = mysqli_real_escape_string($conn, $row['app_id']);
             $db_award_no = mysqli_real_escape_string($conn, $row['award_no']);
-//             $db_ac_year = mysqli_real_escape_string($conn, $row['ac_year']);
             $db_lname = utf8_decode(mysqli_real_escape_string($conn, $row['lname']));
             $db_fname = utf8_decode(mysqli_real_escape_string($conn, $row['fname']));
             $db_mname = utf8_decode(mysqli_real_escape_string($conn, $row['mname']));
@@ -613,13 +612,11 @@ if(isset($_POST['btn_export'])){
             $db_present_street = utf8_decode(mysqli_real_escape_string($conn, $row['present_street']));
             $db_present_barangay = utf8_decode(mysqli_real_escape_string($conn, $row['present_barangay']));
             $db_present_city = utf8_decode(mysqli_real_escape_string($conn, $row['present_city'])); 
-            //$db_present_citymm = utf8_decode(mysqli_real_escape_string($conn, $row['present_citymm'])); 
             $db_present_province = utf8_decode(mysqli_real_escape_string($conn, $row['present_province']));   
             $db_present_zip = utf8_decode(mysqli_real_escape_string($conn, $row['present_zip']));
             $db_permanent_street = utf8_decode(mysqli_real_escape_string($conn, $row['permanent_street']));
             $db_permanent_barangay = utf8_decode(mysqli_real_escape_string($conn, $row['permanent_barangay']));
             $db_permanent_city = utf8_decode(mysqli_real_escape_string($conn, $row['permanent_city']));
-            //$db_permanent_citymm = utf8_decode(mysqli_real_escape_string($conn, $row['permanent_citymm']));
             $db_permanent_province = utf8_decode(mysqli_real_escape_string($conn, $row['permanent_province']));
             $db_permanent_zip = utf8_decode(mysqli_real_escape_string($conn, $row['permanent_zip']));
             $db_contact = mysqli_real_escape_string($conn, $row['contact']);
@@ -755,13 +752,11 @@ if(isset($_POST['btn_export'])){
     $perstreet = str_replace("Ã±","n", $_POST['txt_perstreet']);
     $perbrgy = str_replace("Ã±","n", $db_permanent_barangay);
     $percity = str_replace("Ã±","n", $_POST['txt_percity']);
-    //$percitymm = str_replace("Ã±","n", $_POST['txt_percitymm']);
     $perprovince = str_replace("Ã±","n", $_POST['txt_perprovince']);
     $perzip = str_replace("Ã±","n", $_POST['txt_perzip']);
     $prestreet = str_replace("Ã±","n", $_POST['txt_prestreet']);
     $prebrgy = str_replace("Ã±","n", $db_present_barangay);
     $precity = str_replace("Ã±","n", $_POST['txt_precity']);
-    //$precitymm = str_replace("Ã±","n", $_POST['txt_precitymm']);
     $preprovince = str_replace("Ã±","n", $_POST['txt_preprovince']);
     $prezip = str_replace("Ã±","n", $_POST['txt_prezip']);
     $day = date('Y/m/d');
