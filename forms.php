@@ -199,10 +199,28 @@
                         $db_m_mname = '';
                     }
                     
-                    $db_fname = str_replace('.', '', $db_fname);
-                    $db_lname = str_replace('.', '', $db_lname);
-                    $db_mname = str_replace('.', '', $db_mname);
-                    $db_mothermaiden = str_replace('.', '', $db_mothermaiden);
+                    $db_fname = rtrim(ltrim(str_replace('.', '', $db_fname)));
+                    $db_lname = rtrim(ltrim(str_replace('.', '', $db_lname)));
+                    $db_mname = rtrim(ltrim(str_replace('.', '', $db_mname)));
+                    $db_mothermaiden = rtrim(ltrim(str_replace('.', '', $db_mothermaiden)));
+                    $db_dobirth = rtrim(ltrim(str_replace('.', '', $db_dobirth)));
+                    $db_birth_place = rtrim(ltrim(str_replace('.', '', $db_birth_place)));
+                    $db_s_mobile = rtrim(ltrim(str_replace('.', '', $db_s_mobile)));
+                    $db_s_email = rtrim(ltrim(str_replace('.', '', $db_s_email)));
+                    $db_permanent_street = rtrim(ltrim(str_replace('.', '', $db_permanent_street)));
+                    $db_permanent_barangay = rtrim(ltrim(str_replace('.', '', $db_permanent_barangay)));
+                    $db_permanent_city = rtrim(ltrim(str_replace('.', '', $db_permanent_city)));
+                    $db_permanent_province = rtrim(ltrim(str_replace('.', '', $db_permanent_province)));
+                    $db_permanent_zip = rtrim(ltrim(str_replace('.', '', $db_permanent_zip)));
+                    $db_present_street = rtrim(ltrim(str_replace('.', '', $db_present_street)));
+                    $db_present_barangay = rtrim(ltrim(str_replace('.', '', $db_present_barangay)));
+                    $db_present_city = rtrim(ltrim(str_replace('.', '', $db_present_city)));
+                    $db_present_province = rtrim(ltrim(str_replace('.', '', $db_present_province)));
+                    $db_present_zip = rtrim(ltrim(str_replace('.', '', $db_present_zip)));
+                    $db_contact = rtrim(ltrim(str_replace('.', '', $db_contact)));
+                    $db_email = rtrim(ltrim(str_replace('.', '', $db_email)));
+                    $db_id_number = rtrim(ltrim(str_replace('.', '', $db_id_number)));
+                    $db_tin = rtrim(ltrim(str_replace('.', '', $db_tin)));
                 }    
                                
             }
@@ -1073,9 +1091,9 @@
                             </div>
                             <div class="form-row">
                                 
-                                <div class="col" style="text-align:center"><button class="btn btn-primary save" name="btn_save" type="submit" style="width:110px;margin-right:15px;" <?php if($db_status == "Finalized"){echo "disabled";} ?>><i class="fa fa-save" style="margin-right:10px;" ></i>Save</button>
+                                <div class="col" style="text-align:center"><button class="btn btn-primary save" name="btn_save" type="submit" style="width:110px;margin-right:15px;" <?php if($db_status == "Finalized" || $db_status == "App-DAT" || $db_status == "SubToUniFAST" || $db_status == "Approved"){echo "disabled";} ?>><i class="fa fa-save" style="margin-right:10px;" ></i>Save</button>
                                 <!--<button class="btn btn-success save" type="submit" style="width:110px;" name="btn_export"><i class="fa fa-file-export" style="margin-right:10px;"></i>Export</button>-->
-                                <input type="button" class="btn btn-success btn_ view_data btn_export1" value="Finalize" data-toggle="modal" id="btn_export" name="btn_export" data-target="#modal_profile" style="margin-right:10px;width:110px;margin-right:15px;" <?php if($db_status == "Finalized"){echo "disabled";} echo $completeInput; ?> >
+                                <input type="button" class="btn btn-success btn_ view_data btn_export1" value="Finalize" data-toggle="modal" id="btn_export" name="btn_export" data-target="#modal_profile" style="margin-right:10px;width:110px;margin-right:15px;" <?php if($db_status == "Finalized" || $db_status == "App-DAT" || $db_status == "SubToUniFAST" || $db_status == "Approved"){echo "disabled";} echo $completeInput; ?> >
                                 </div>
                             </div>
                         </div>

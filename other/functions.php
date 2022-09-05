@@ -150,18 +150,18 @@ if(isset($_POST['btn_save'])){
         // UPDATE tbl_lbp_form for additional grantee info   
         
         if(isset($_POST['chk_sameAddress'])){
-            $prestreet = mysqli_real_escape_string($conn, $_POST['txt_perstreet']);
-            $prebrgy = mysqli_real_escape_string($conn, $_POST['txt_perbrgy']);
-            $precity = mysqli_real_escape_string($conn, $_POST['txt_percity']);
-            $preprovince = mysqli_real_escape_string($conn, $_POST['txt_perprovince']);
-            $prezip =  mysqli_real_escape_string($conn, $_POST['txt_perzip']);
+            $prestreet = rtrim(ltrim(mysqli_real_escape_string($conn, $_POST['txt_perstreet'])));
+            $prebrgy = rtrim(ltrim(mysqli_real_escape_string($conn, $_POST['txt_perbrgy'])));
+            $precity = rtrim(ltrim(mysqli_real_escape_string($conn, $_POST['txt_percity'])));
+            $preprovince = rtrim(ltrim(mysqli_real_escape_string($conn, $_POST['txt_perprovince'])));
+            $prezip =  rtrim(ltrim(mysqli_real_escape_string($conn, $_POST['txt_perzip'])));
         }
         elseif(!isset($_POST['chk_sameAddress'])){
-            $prestreet = mysqli_real_escape_string($conn, $_POST['txt_prestreet']);
-            $prebrgy = mysqli_real_escape_string($conn, $_POST['txt_prebrgy']);
-            $precity = mysqli_real_escape_string($conn, $_POST['txt_precity']);
-            $preprovince = mysqli_real_escape_string($conn, $_POST['txt_preprovince']); 
-            $prezip = mysqli_real_escape_string($conn, $_POST['txt_prezip']); 
+            $prestreet = rtrim(ltrim(mysqli_real_escape_string($conn, $_POST['txt_prestreet'])));
+            $prebrgy = rtrim(ltrim(mysqli_real_escape_string($conn, $_POST['txt_prebrgy'])));
+            $precity = rtrim(ltrim(mysqli_real_escape_string($conn, $_POST['txt_precity'])));
+            $preprovince = rtrim(ltrim(mysqli_real_escape_string($conn, $_POST['txt_preprovince']))); 
+            $prezip = rtrim(ltrim(mysqli_real_escape_string($conn, $_POST['txt_prezip']))); 
         }
         
         /*
@@ -180,35 +180,35 @@ if(isset($_POST['btn_save'])){
         }
         */
         $branchRegion = mysqli_real_escape_string($conn, $_POST['dd_location']);
-        $fname = mysqli_real_escape_string($conn, $_POST['txt_fname']);
-        $mname = mysqli_real_escape_string($conn, $_POST['txt_mname']);
-        $lname = mysqli_real_escape_string($conn, $_POST['txt_lname']);
-        $title = mysqli_real_escape_string($conn, $_POST['dd_title']);
-        $gender = mysqli_real_escape_string($conn, $_POST['txt_gender']);
-        $marital_status = mysqli_real_escape_string($conn, $_POST['dd_marital_status']);
-        $m_fname = mysqli_real_escape_string($conn, $_POST['txt_fmothername']);
-        $m_mname = mysqli_real_escape_string($conn, $_POST['txt_mmothername']);
-        $m_lname = mysqli_real_escape_string($conn, $_POST['txt_lmothername']);
-        $dobirth = mysqli_real_escape_string($conn, $_POST['txt_dateofbirth']);
-        $pobirth = mysqli_real_escape_string($conn, $_POST['txt_placeofbirth']);
-        $nationality = mysqli_real_escape_string($conn, $_POST['txt_nationality']);
-        $idnumber = mysqli_real_escape_string($conn, $_POST['txt_idnumber']);
+        $fname = rtrim(ltrim(mysqli_real_escape_string($conn, $_POST['txt_fname'])));
+        $mname = rtrim(ltrim(mysqli_real_escape_string($conn, $_POST['txt_mname'])));
+        $lname = rtrim(ltrim(mysqli_real_escape_string($conn, $_POST['txt_lname'])));
+        $title = rtrim(ltrim(mysqli_real_escape_string($conn, $_POST['dd_title'])));
+        $gender = rtrim(ltrim(mysqli_real_escape_string($conn, $_POST['txt_gender'])));
+        $marital_status = rtrim(ltrim(mysqli_real_escape_string($conn, $_POST['dd_marital_status'])));
+        $m_fname = rtrim(ltrim(mysqli_real_escape_string($conn, $_POST['txt_fmothername'])));
+        $m_mname = rtrim(ltrim(mysqli_real_escape_string($conn, $_POST['txt_mmothername'])));
+        $m_lname = rtrim(ltrim(mysqli_real_escape_string($conn, $_POST['txt_lmothername'])));
+        $dobirth = rtrim(ltrim(mysqli_real_escape_string($conn, $_POST['txt_dateofbirth'])));
+        $pobirth = rtrim(ltrim(mysqli_real_escape_string($conn, $_POST['txt_placeofbirth'])));
+        $nationality = rtrim(ltrim(mysqli_real_escape_string($conn, $_POST['txt_nationality'])));
+        $idnumber = rtrim(ltrim(mysqli_real_escape_string($conn, $_POST['txt_idnumber'])));
         $idtype = "02";
-        $tin = mysqli_real_escape_string($conn, $_POST['txt_tin']);
-        $profession = mysqli_real_escape_string($conn, $_POST['txt_profession']);
-        $sourcefund_id = mysqli_real_escape_string($conn, $_POST['dd_sourceoffund']);
+        $tin = rtrim(ltrim(mysqli_real_escape_string($conn, $_POST['txt_tin'])));
+        $profession = rtrim(ltrim(mysqli_real_escape_string($conn, $_POST['txt_profession'])));
+        $sourcefund_id = rtrim(ltrim(mysqli_real_escape_string($conn, $_POST['dd_sourceoffund'])));
         $gross_salary_id = "1";
         $sourcefund_id = "99";
-        $perstreet = mysqli_real_escape_string($conn, $_POST['txt_perstreet']);
-        $perbrgy = mysqli_real_escape_string($conn, $_POST['txt_perbrgy']);
-        $percity = mysqli_real_escape_string($conn, $_POST['txt_percity']);
-        $perprovince = mysqli_real_escape_string($conn, $_POST['txt_perprovince']);
-        $perzip = mysqli_real_escape_string($conn, $_POST['txt_perzip']);
-        $mobile = mysqli_real_escape_string($conn, $_POST['txt_mobile']);
-        $email = mysqli_real_escape_string($conn, $_POST['txt_email']);
-        $emboss = mysqli_real_escape_string($conn, $_POST['txt_emboss']);
-        $expiry_date = mysqli_real_escape_string($conn, $_POST['txt_expirydate']);
-        $pickup_at_hei = mysqli_real_escape_string($conn, $_POST['chk_pickup_at_hei']);
+        $perstreet = rtrim(ltrim(mysqli_real_escape_string($conn, $_POST['txt_perstreet'])));
+        $perbrgy = rtrim(ltrim(mysqli_real_escape_string($conn, $_POST['txt_perbrgy'])));
+        $percity = rtrim(ltrim(mysqli_real_escape_string($conn, $_POST['txt_percity'])));
+        $perprovince = rtrim(ltrim(mysqli_real_escape_string($conn, $_POST['txt_perprovince'])));
+        $perzip = rtrim(ltrim(mysqli_real_escape_string($conn, $_POST['txt_perzip'])));
+        $mobile = rtrim(ltrim(mysqli_real_escape_string($conn, $_POST['txt_mobile'])));
+        $email = rtrim(ltrim(mysqli_real_escape_string($conn, $_POST['txt_email'])));
+        $emboss = rtrim(ltrim(mysqli_real_escape_string($conn, $_POST['txt_emboss'])));
+        $expiry_date = rtrim(ltrim(mysqli_real_escape_string($conn, $_POST['txt_expirydate'])));
+        $pickup_at_hei = rtrim(ltrim(mysqli_real_escape_string($conn, $_POST['chk_pickup_at_hei'])));
         
         $u_photo = $_FILES['file_photo'];
         
