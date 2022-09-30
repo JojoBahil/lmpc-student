@@ -498,18 +498,22 @@ if(isset($_POST['btn_save'])){
             $new_emboss_mname = $mname_emboss;
             $emboss_name = $fname.' '.$new_emboss_mname.' '.$lname;
         }
-        elseif($mname_emboss == '' || $mname_emboss == NULL){
+        elseif(strlen($mname_emboss) == 1){
+            $emboss_name = $fname.' '.$mname.' '.$lname;
+        }
+        elseif(strlen($mname_emboss) == 0){
             $emboss_name = $fname.' '.$lname;
         }
-        elseif(strlen($mname_emboss) == 1){
-            $emboss_name = $emboss_name;
-        }
+        
 
         if(strlen($emboss_name) > 22){
             $string_difference = strlen($emboss_name) - 22;
             $fname_new = substr($fname, 0, -$string_difference);
             $emboss_name = $fname_new.' '.$new_emboss_mname.' '.$lname; 
         }
+
+        
+
         $emboss_name = strtoupper($emboss_name);
          
         $sql = "UPDATE tbl_lbp_form set 
