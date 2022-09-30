@@ -164,21 +164,6 @@ if(isset($_POST['btn_save'])){
             $prezip = rtrim(ltrim(mysqli_real_escape_string($conn, $_POST['txt_prezip']))); 
         }
         
-        /*
-        if($_POST['dd_branches'] == "Select your most accessible branch"){
-            $branchName = "";
-        }
-        else{
-            $sqlSelectBranch = "SELECT * FROM tbl_lbp_branches WHERE uid = ".$_POST['dd_branches']; 
-            $resultsqlSelectBranch = mysqli_query($conn, $sqlSelectBranch); 
-            $checksqlSelectBranch = mysqli_num_rows($resultsqlSelectBranch);
-            if($checksqlSelectBranch > 0){
-                while($row = mysqli_fetch_assoc($resultsqlSelectBranch)){
-                    $branchName = mysqli_real_escape_string($conn, $row['branch_name']);
-                }
-            }  
-        }
-        */
         $branchRegion = mysqli_real_escape_string($conn, $_POST['dd_location']);
         $fname = rtrim(ltrim(mysqli_real_escape_string($conn, $_POST['txt_fname'])));
         $mname = rtrim(ltrim(mysqli_real_escape_string($conn, $_POST['txt_mname'])));
@@ -515,6 +500,9 @@ if(isset($_POST['btn_save'])){
         }
         elseif($mname_emboss == '' || $mname_emboss == NULL){
             $emboss_name = $fname.' '.$lname;
+        }
+        elseif(strlen($mname_emboss) == 1){
+            $emboss_name = $emboss_name;
         }
 
         if(strlen($emboss_name) > 22){

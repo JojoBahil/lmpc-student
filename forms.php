@@ -218,7 +218,7 @@
                     $db_present_province = rtrim(ltrim(str_replace('.', '', $db_present_province)));
                     $db_present_zip = rtrim(ltrim(str_replace('.', '', $db_present_zip)));
                     $db_contact = rtrim(ltrim(str_replace('.', '', $db_contact)));
-                    $db_email = rtrim(ltrim(str_replace('.', '', $db_email)));
+                    $db_email = rtrim(ltrim( $db_email));
                     $db_id_number = rtrim(ltrim(str_replace('.', '', $db_id_number)));
                     $db_tin = rtrim(ltrim(str_replace('.', '', $db_tin)));
                 }    
