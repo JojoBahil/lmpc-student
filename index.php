@@ -36,7 +36,7 @@
 
                     <div class="form-group"><input class="form-control" type="text" name="awardeenum" placeholder="Award Number" ></div>
                     <div class="form-group"><input class="form-control" type="password" name="password" placeholder="Password" ></div>
-                    <div class="form-group"><button class="btn btn-primary btn-block" type="submit" name="btn_login" >Log In</button></div>
+                    <div class="form-group"><button class="btn btn-primary btn-block" type="submit" name="btn_login">Log In</button></div>
                     
                 </form>
             </div>

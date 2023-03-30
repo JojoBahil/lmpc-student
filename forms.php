@@ -241,7 +241,16 @@
                                 <div class="col">                                
                                     <?php
                                     
-                                        if($db_status == "Approved"){
+                                        if($db_status == "Claimed"){
+                                            echo "<div class='form-row' style='background-color:#DFF2BF;text-align:center;border-radius:7px;padding-top:10px;padding-bottom:10px;'>
+                                                <div class='col'>
+                                                    <span style='color:#4F8A10;font-size:15px;'>
+                                                        You already claimed your LMPC. Disbursement of grants through LMPC will be implemented soon. Stay tuned.
+                                                    </span>
+                                                </div>
+                                            </div><br>";
+                                        }
+                                        elseif($db_status == "Approved"){
                                             echo "<div class='form-row' style='background-color:#DFF2BF;text-align:center;border-radius:7px;padding-top:10px;padding-bottom:10px;'>
                                                 <div class='col'>
                                                     <span style='color:#4F8A10;font-size:15px;'>
@@ -427,8 +436,8 @@
                                         <div class="col" style='padding-top:10px;'>
                                             <div>
                                                 <div>
-                                                    <input type="file" <?php if(!empty($db_photo) && file_exists(substr($db_photo, 3))){echo "hidden";} ?> name="file_photo" id="file_photo" class="btn file_photo" accept="image/jpeg" <?php if($db_status == "Finalized"){echo "disabled";} ?>>
-                                                    <input type="button" <?php if(empty($db_photo) || file_exists(substr($db_photo, 3)) == false){echo "hidden";} ?> name="btn_changephoto" id="btn_changephoto" class="btn btn-warning btn_changephoto" value="Change Image" <?php if($db_status == "Finalized"){echo "disabled";} ?>>
+                                                    <input type="file" <?php if(!empty($db_photo) && file_exists(substr($db_photo, 3))){echo "hidden";} ?> name="file_photo" id="file_photo" class="btn file_photo" accept="image/jpeg" <?php if($db_status == "Finalized" || $db_status == "SubToUniFAST" || $db_status == "Exported" || $db_status == "Approved" || $db_status == "Rejected" || $db_status == "Claimed"){echo "disabled";} ?>>
+                                                    <input type="button" <?php if(empty($db_photo) || file_exists(substr($db_photo, 3)) == false){echo "hidden";} ?> name="btn_changephoto" id="btn_changephoto" class="btn btn-warning btn_changephoto" value="Change Image" <?php if($db_status == "Finalized" || $db_status == "SubToUniFAST" || $db_status == "Exported" || $db_status == "Approved" || $db_status == "Rejected" || $db_status == "Claimed"){echo "disabled";} ?>>
                                                 </div>
                                                 <div style="padding-top:10px;"></div>
                                             </div>
@@ -1092,9 +1101,9 @@
                             </div>
                             <div class="form-row">
                                 
-                                <div class="col" style="text-align:center"><button class="btn btn-primary save" name="btn_save" type="submit" style="width:110px;margin-right:15px;" <?php if($db_status == "Finalized" || $db_status == "App-DAT" || $db_status == "SubToUniFAST" || $db_status == "Approved"){echo "disabled";} ?>><i class="fa fa-save" style="margin-right:10px;" ></i>Save</button>
+                                <div class="col" style="text-align:center"><button class="btn btn-primary save" name="btn_save" type="submit" style="width:110px;margin-right:15px;" <?php if($db_status == "Finalized" || $db_status == "App-DAT" || $db_status == "SubToUniFAST" || $db_status == "Approved" || $db_status == "Claimed"){echo "disabled";} ?>><i class="fa fa-save" style="margin-right:10px;" ></i>Save</button>
                                 <!--<button class="btn btn-success save" type="submit" style="width:110px;" name="btn_export"><i class="fa fa-file-export" style="margin-right:10px;"></i>Export</button>-->
-                                <input type="button" class="btn btn-success btn_ view_data btn_export1" value="Finalize" data-toggle="modal" id="btn_export" name="btn_export" data-target="#modal_profile" style="margin-right:10px;width:110px;margin-right:15px;" <?php if($db_status == "Finalized" || $db_status == "App-DAT" || $db_status == "SubToUniFAST" || $db_status == "Approved"){echo "disabled";} echo $completeInput; ?> >
+                                <input type="button" class="btn btn-success btn_ view_data btn_export1" value="Finalize" data-toggle="modal" id="btn_export" name="btn_export" data-target="#modal_profile" style="margin-right:10px;width:110px;margin-right:15px;" <?php if($db_status == "Finalized" || $db_status == "App-DAT" || $db_status == "SubToUniFAST" || $db_status == "Approved" || $db_status == "Claimed"){echo "disabled";} if($db_status == "Not Finalized"){echo $completeInput;} ?> >
                                 </div>
                             </div>
                         </div>
