@@ -13,7 +13,8 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>TES - LANDBANK Form</title>
+        <title>LMPC Application Portal</title>
+        <link rel="icon" href="image/lmpcicon.ico">
         <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="assets/css/Footer-Basic.css">
         <link rel="stylesheet" href="assets/css/instruction.css">
