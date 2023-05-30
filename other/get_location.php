@@ -1,7 +1,7 @@
 <html>
 
 <?php
-    include("dbconn.php");
+    include("dbconnect.php");
     header("Content-Type:text/html; charset=ISO-8859-1");
     
     $sqlLocation = "SELECT uid, branch_name FROM tbl_lbp_branches WHERE location ='".$_POST["locationName"]."'";

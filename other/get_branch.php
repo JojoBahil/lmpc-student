@@ -1,7 +1,7 @@
 <html>
 
 <?php
-    include("dbconn.php");
+    include("dbconnect.php");
     header("Content-Type:text/html; charset=ISO-8859-1");
     
     $sqlLocation = "SELECT uid, branch_code, branch_name FROM tbl_lbp_branches WHERE region ='".$_POST["branch_region"]."' AND branch_code IS NOT NULL ORDER BY branch_name";

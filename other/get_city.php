@@ -1,7 +1,7 @@
 <html>
 
 <?php
-    include("dbconn.php");
+    include("dbconnect.php");
     header("Content-Type:text/html; charset=ISO-8859-1");
     
     $sqlProv = "SELECT town FROM tbl_towns WHERE province ='".$_POST["province"]."'";

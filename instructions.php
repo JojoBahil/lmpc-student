@@ -1,7 +1,7 @@
 <?php
     session_start();
     
-    include('other/dbconn.php');
+    include('other/dbconnect.php');
     header("Content-Type:text/html; charset=ISO-8859-1");
 
     if(!$_SESSION['awardeenumber']){

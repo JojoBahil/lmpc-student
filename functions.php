@@ -5,7 +5,7 @@
     
 //     header("Content-Type:text/html; charset=utf-8");
 //     $connect -> set_charset('utf8');
-    include('dbconn.php');
+    include('dbconnect.php');
     include('../plugin_fpdf_merge/fpdf_merge.php');    
     header("Content-Type:text/html; charset=ISO-8859-1");
     require('../fpdf181/fpdf.php');

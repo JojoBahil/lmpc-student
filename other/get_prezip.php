@@ -1,7 +1,7 @@
 <html>
 
 <?php
-    include("dbconn.php");
+    include("dbconnect.php");
     header("Content-Type:text/html; charset=ISO-8859-1");
     
     $sqlProvZip = "SELECT zipcode FROM tbl_towns WHERE town ='".$_POST["town"]."' AND province = '".$_POST['province']."' AND province <> 'METRO MANILA' LIMIT 1 ";
