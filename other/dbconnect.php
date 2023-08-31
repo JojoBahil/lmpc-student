@@ -1,9 +1,9 @@
 <?php
 
-$dbservername = "localhost";
+$dbservername = "92.204.135.165";
 $dbusername = "unifastgov_lmpc";
 
-$dbpassword = "7_d[MJB(#l8A";
+$dbpassword = "teslmpconlineapplication";
 $dbname = "unifastgov_ufdb";
 
 $conn = mysqli_connect($dbservername, $dbusername, $dbpassword, $dbname);
